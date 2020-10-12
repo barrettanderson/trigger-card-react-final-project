@@ -1,0 +1,2 @@
+class CopingSkill < ApplicationRecord
+end

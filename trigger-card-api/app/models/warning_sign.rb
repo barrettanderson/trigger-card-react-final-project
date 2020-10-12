@@ -1,0 +1,2 @@
+class WarningSign < ApplicationRecord
+end
