@@ -19,8 +19,17 @@ Trigger.create([
     letting_people_down
 ])
 
+defensive = {
+    name: "Being defensive",
+    description: "Becoming closed off, trying to protect or justify self"
+}
+quickening_pulse = {
+    name: "Quickening Pulse",
+    description: "My pulse begins to quicken, leading to worse decision making and impatience"
+}
 WarningSign.create([
-    { }
+    defensive,
+    quickening_pulse
 ])
 
 CopingSkill.create([
