@@ -32,9 +32,15 @@ WarningSign.create([
     quickening_pulse
 ])
 
+listen_to_music = {
+    name: "Listen to music",
+    description: "Distraction - to help take a break"
+}
+box_breathing = {
+    name: "Box breathing",
+    description: "Meditative - regulate breathing, focus on going around the box"
+}
 CopingSkill.create([
-    { }
+    listen_to_music,
+    box_breathing
 ])
-
-t.string :name
-t.string :description
