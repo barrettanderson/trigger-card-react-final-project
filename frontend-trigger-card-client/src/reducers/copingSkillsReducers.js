@@ -1,9 +1,9 @@
 export default (state=[], action) => {
     switch(action.type) {
-        case "SHOW_TRIGGERS":
-            return action.triggers 
-        // case "ADD_TRIGGER":
-        //     return[...state, action.trigger]     
+        case "SHOW_COPING_SKILLS":
+            return action.copings_skills
+        // case "ADD_COPING_SKILL":
+        //     return[...state, action.coping_skill]     
         default:
             return state;
     }
