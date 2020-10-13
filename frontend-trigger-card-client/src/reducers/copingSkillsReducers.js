@@ -1,7 +1,7 @@
 export default (state=[], action) => {
     switch(action.type) {
         case "SHOW_COPING_SKILLS":
-            return action.copings_skills
+            return action.coping_skills
         // case "ADD_COPING_SKILL":
         //     return[...state, action.coping_skill]     
         default:
