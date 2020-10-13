@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 
 export class CopingSkillList extends Component {
     render() {
+        // console.log(this.props)
         const coping_skills = this.props.coping_skills.map((coping_skill, i) => <CopingSkillCard key={i} coping_skill={coping_skill}/>)
         return (
             <div>

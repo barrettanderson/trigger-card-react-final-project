@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 
 class WarningSignList extends Component {
     render() {
-        console.log(this.props)
+        // console.log(this.props)
         const warning_signs = this.props.warning_signs.map((warning_sign, i) => <WarningSignCard key={i} warning_sign={warning_sign} />)
         return (
             <div>

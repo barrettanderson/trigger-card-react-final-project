@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 
 class TriggerList extends Component {
     render() {
+        // console.log(this.props)
         const triggers = this.props.triggers.map((trigger, i) => <TriggerCard key={i} trigger={trigger} />)
         return (
             <div>
