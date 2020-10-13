@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import NavBar from './components/NavBar'
+import Home from './containers/Home'
+import { connect } from 'react-redux'
+
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 class App extends Component {
   state = {
@@ -14,14 +18,18 @@ class App extends Component {
   
   render() {
     return (
-      <div className="App">
-        <NavBar>
-          <h1>Trigger Card</h1>
-
-        </NavBar>
-      </div>
+      <Router>
+        <div className="App">
+          <NavBar>
+          <Switch>
+            <Route exact path="/" component={ Home }/>
+          </Switch>
+          </NavBar>
+        </div>
+      </Router>
     );
   }
 }
 
-export default App;
+// export default connect(null, { fetchTriggerCard })(App);
+export default App
