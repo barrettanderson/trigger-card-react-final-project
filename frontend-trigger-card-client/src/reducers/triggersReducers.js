@@ -1,7 +1,7 @@
 export default (state=[], action) => {
     switch(action.type) {
         case "SHOW_TRIGGERS":
-            return action.triggers 
+            return action.triggers //triggers: []
         // case "ADD_TRIGGER":
         //     return[...state, action.trigger]     
         default:
