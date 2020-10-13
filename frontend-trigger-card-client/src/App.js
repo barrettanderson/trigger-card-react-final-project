@@ -7,6 +7,7 @@ import CopingSkillList from './containers/CopingSkillList';
 import { connect } from 'react-redux';
 import { fetchTriggers } from './actions/triggerActions';
 import { fetchWarningSigns } from './actions/warningSignActions';
+import { fetchCopingSkills } from './actions/copingSkillActions';
 
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
@@ -15,6 +16,7 @@ class App extends Component {
   componentDidMount() {
     this.props.fetchTriggers()
     this.props.fetchWarningSigns()
+    this.props.fetchCopingSkills()
     // add each action individually
   }
   
@@ -35,5 +37,5 @@ class App extends Component {
   }
 }
 
-export default connect(null, { fetchTriggers, fetchWarningSigns })(App);
+export default connect(null, { fetchTriggers, fetchWarningSigns, fetchCopingSkills })(App);
 // export default App
