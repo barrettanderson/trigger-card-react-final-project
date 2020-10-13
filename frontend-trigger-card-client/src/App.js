@@ -1,23 +1,20 @@
 import React, { Component } from 'react';
-import NavBar from './components/NavBar'
-import Home from './containers/Home'
-import TriggerList from './containers/TriggerList'
-import WarningSignList from './containers/WarningSignList'
-import CopingSkillList from './containers/CopingSkillList'
-import { connect } from 'react-redux'
-import { fetchTriggers } from './actions/triggerActions'
+import NavBar from './components/NavBar';
+import Home from './containers/Home';
+import TriggerList from './containers/TriggerList';
+import WarningSignList from './containers/WarningSignList';
+import CopingSkillList from './containers/CopingSkillList';
+import { connect } from 'react-redux';
+import { fetchTriggers } from './actions/triggerActions';
+import { fetchWarningSigns } from './actions/warningSignActions';
 
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 class App extends Component {
-  // state = {
-  //   triggers: [],
-  //   warning_signs: [],
-  //   coping_skills: []
-  // }
 
   componentDidMount() {
     this.props.fetchTriggers()
+    this.props.fetchWarningSigns()
     // add each action individually
   }
   
@@ -38,5 +35,5 @@ class App extends Component {
   }
 }
 
-export default connect(null, { fetchTriggers })(App);
+export default connect(null, { fetchTriggers, fetchWarningSigns })(App);
 // export default App
