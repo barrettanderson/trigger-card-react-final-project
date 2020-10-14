@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import CopingSkillCard from '../components/CopingSkillCard';
 import { connect } from 'react-redux';
+import CopingSkillForm from './CopingSkillForm'
 
 export class CopingSkillList extends Component {
     render() {
@@ -12,6 +13,8 @@ export class CopingSkillList extends Component {
                 <ul>
                     { coping_skills }
                 </ul>
+                <h3>Add Coping Skill</h3>
+                <CopingSkillForm />
             </div>
         )
     }
