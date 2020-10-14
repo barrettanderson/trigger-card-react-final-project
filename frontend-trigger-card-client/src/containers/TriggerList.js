@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import TriggerCard from '../components/TriggerCard'
 import { connect } from 'react-redux'
+import TriggerForm from './TriggerForm'
 
 class TriggerList extends Component {
     render() {
@@ -12,7 +13,7 @@ class TriggerList extends Component {
                 <ul>
                     { triggers }
                 </ul>
-
+                <TriggerForm />
             </div>
         )
     }

@@ -39,4 +39,3 @@ class App extends Component {
 }
 
 export default connect(null, { fetchTriggers, fetchWarningSigns, fetchCopingSkills })(App);
-// export default App
