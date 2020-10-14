@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import WarningSignCard from '../components/WarningSignCard'
 import { connect } from 'react-redux'
+import WarningSignForm from './WarningSignForm'
 
 
 class WarningSignList extends Component {
@@ -13,6 +14,8 @@ class WarningSignList extends Component {
                 <ul>
                     { warning_signs }
                 </ul>
+                <h3>Add Warning Sign</h3>
+                <WarningSignForm />
             </div>
         )
     }
