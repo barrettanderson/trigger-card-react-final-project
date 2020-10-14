@@ -32,7 +32,6 @@ class WarningSignForm extends Component {
     render() {
         return (
             <div>
-                <p>test</p>
                 <form onSubmit={this.handleSubmit.bind(this)}>
                     <div>
                         <label htmlFor="name">Name: </label>

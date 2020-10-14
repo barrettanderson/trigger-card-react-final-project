@@ -32,8 +32,7 @@ export class CopingSkillForm extends Component {
     render() {
         return (
             <div>
-                <p>test</p>
-                <form>
+                <form onSubmit={this.handleSubmit.bind(this)}>
                     <div>
                         <label htmlFor="name">Name: </label>
                         <input type="text" name="name" id="name" value={this.state.name} onChange={this.handleChange}/>
