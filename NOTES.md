@@ -2,9 +2,10 @@ Questions for Laura
 
 ComponentDidMount
 
-    Displaying home
-    Needing help fetching info
+    Editing / Deleting
+        having an id - do I need to use something like uuid?
+        key prop to be unique
 
-    Should I be fetching all three models here?  Or should I be separating it into different concerns?s
-
-    Check out bootstrap for css library
+        Ideas for formatting -
+            Garbage can for delete
+            confirm to confirm delete, pass in ("Yes or no?")
