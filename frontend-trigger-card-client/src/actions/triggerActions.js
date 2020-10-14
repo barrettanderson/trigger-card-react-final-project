@@ -5,18 +5,18 @@ const showTriggers = (triggers) => {
     }
 }
 
-const addTrigger = (trigger) => {
-    return {
-        type: "ADD_TRIGGER",
-        trigger
-    }
-}
-
 export const fetchTriggers = () => {
     return (dispatch) => {
         fetch('http://localhost:3001/triggers')
             .then( resp => resp.json() )
             .then( triggers => dispatch(showTriggers(triggers)))
+    }
+}
+
+const addTrigger = (trigger) => {
+    return {
+        type: "ADD_TRIGGER",
+        trigger
     }
 }
 
@@ -36,3 +36,24 @@ export const createTrigger = (triggerData) => {
             })
     }
 }
+
+const removeTrigger = (id) => {
+    return {
+        type: "DELETE_TRIGGER",
+        id
+    }
+}
+
+export const deleteTrigger = (id) => {
+    return (dispatch) => {
+        fetch(`http://localhost:3001/triggers/${id}`, {
+            method: "DELETE",
+        })
+            .then( resp => resp.json() )
+            .then( data => {
+                console.log(data)
+                dispatch(removeTrigger(data.id))
+            })
+    }
+}
+
