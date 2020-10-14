@@ -4,6 +4,8 @@ export default (state=[], action) => {
             return action.triggers //triggers: []
         case "ADD_TRIGGER":
             return[...state, action.trigger]     
+        case "DELETE_TRIGGER":
+            return state.triggers.filter(trigger => trigger.id !== action.id)
         default:
             return state;
     }
