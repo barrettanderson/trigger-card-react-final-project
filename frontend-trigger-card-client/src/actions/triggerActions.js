@@ -20,7 +20,7 @@ export const fetchTriggers = () => {
     }
 }
 
-export const createTrigger = (triggerData, history) => {
+export const createTrigger = (triggerData) => {
     return (dispatch) => {
         fetch('http://localhost:3001/triggers', {
             method: "POST",
@@ -33,7 +33,6 @@ export const createTrigger = (triggerData, history) => {
             .then( resp => resp.json() )
             .then( trigger => {
                 dispatch(addTrigger(trigger))
-                history.push('/triggers')
             })
     }
 }

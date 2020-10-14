@@ -21,14 +21,14 @@ class TriggerForm extends Component {
             trigger: this.state
         }
         
-        this.props.createTrigger(trigger, this.props.history)
+        this.props.createTrigger(trigger)
     }
     
     render() {
         return (
             <div>
                 <p>test</p>
-                <form>
+                <form onSubmit={this.handleSubmit.bind(this)}>
                     <div>
                         <label htmlFor="name">Name: </label>
                         <input type="text" name="name" id="name" value={this.state.name} onChange={this.handleChange}/>
@@ -45,4 +45,4 @@ class TriggerForm extends Component {
     }
 }
 
-export default connect(null, { createTrigger })(TriggerForm)
+export default connect(null, { createTrigger})(TriggerForm)
