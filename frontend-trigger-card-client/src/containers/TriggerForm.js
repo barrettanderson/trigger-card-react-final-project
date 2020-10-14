@@ -22,6 +22,11 @@ class TriggerForm extends Component {
         }
         
         this.props.createTrigger(trigger)
+
+        this.setState({
+            name: "",
+            description: ""
+        })
     }
     
     render() {
