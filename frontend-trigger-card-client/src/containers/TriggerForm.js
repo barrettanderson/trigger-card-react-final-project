@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
+import { createTrigger } from '../actions/triggerActions'
 
 class TriggerForm extends Component {
     state = {
@@ -12,6 +13,16 @@ class TriggerForm extends Component {
             [event.target.name]: event.target.value
         })
     }
+
+    handleSubmit = event => {
+        event.preventDefault();
+
+        const trigger = {
+            trigger: this.state
+        }
+        
+        this.props.createTrigger(trigger, this.props.history)
+    }
     
     render() {
         return (
@@ -19,13 +30,19 @@ class TriggerForm extends Component {
                 <p>test</p>
                 <form>
                     <div>
-                        <label htmlFor="name">Name:</label>
+                        <label htmlFor="name">Name: </label>
                         <input type="text" name="name" id="name" value={this.state.name} onChange={this.handleChange}/>
                     </div>
+                    <div>
+                        <label htmlFor="description">Description: </label>
+                        <input type="text" name="description" id="description" value={this.state.description} onChange={this.handleChange}/>
+                    </div>
+
+                    <input type="submit" value="Add Trigger" />
                 </form>
             </div>
         )
     }
 }
 
-export default TriggerForm
+export default connect(null, { createTrigger })(TriggerForm)
