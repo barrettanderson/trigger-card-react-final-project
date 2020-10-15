@@ -1,4 +1,6 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { deleteWarningSign } from '../actions/warningSignActions'
 
 export class WarningSignButtons extends Component {
     render() {
@@ -10,4 +12,4 @@ export class WarningSignButtons extends Component {
     }
 }
 
-export default WarningSignButtons
+export default connect(null, { deleteWarningSign })(WarningSignButtons)

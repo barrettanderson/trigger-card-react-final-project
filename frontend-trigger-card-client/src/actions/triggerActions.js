@@ -45,7 +45,7 @@ const removeTrigger = (id) => {
 }
 
 export const deleteTrigger = (id) => {
-    debugger
+    // debugger
     return (dispatch) => {
         fetch(`http://localhost:3001/triggers/${id}`, {
             method: "DELETE"
