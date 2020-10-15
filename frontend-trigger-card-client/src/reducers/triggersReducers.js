@@ -5,7 +5,7 @@ export default (state=[], action) => {
         case "ADD_TRIGGER":
             return[...state, action.trigger]     
         case "DELETE_TRIGGER":
-            return state.triggers.filter(trigger => trigger.id !== action.id)
+            return state.filter(trigger => trigger.id !== action.id)
         default:
             return state;
     }
