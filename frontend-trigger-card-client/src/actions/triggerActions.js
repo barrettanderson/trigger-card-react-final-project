@@ -45,15 +45,12 @@ const removeTrigger = (id) => {
 }
 
 export const deleteTrigger = (id) => {
+    debugger
     return (dispatch) => {
         fetch(`http://localhost:3001/triggers/${id}`, {
-            method: "DELETE",
-        })
-            .then( resp => resp.json() )
-            .then( data => {
-                console.log(data)
-                dispatch(removeTrigger(data.id))
-            })
+            method: "DELETE"
+        }) 
+            .then( resp => dispatch(removeTrigger(id)))
     }
 }
 
