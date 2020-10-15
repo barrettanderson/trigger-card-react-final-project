@@ -5,18 +5,18 @@ const showCopingSkills = (coping_skills) => {
     }
 }
 
-const addCopingSkill = (coping_skill) => {
-    return {
-        type: "ADD_COPING_SKILL",
-        coping_skill
-    }
-}
-
 export const fetchCopingSkills = () => {
     return (dispatch) => {
         fetch('http://localhost:3001/coping_skills')
             .then( resp => resp.json() )
             .then( coping_skills => dispatch(showCopingSkills(coping_skills)))
+    }
+}
+
+const addCopingSkill = (coping_skill) => {
+    return {
+        type: "ADD_COPING_SKILL",
+        coping_skill
     }
 }
 
@@ -34,5 +34,21 @@ export const createCopingSkill = (copingSkillData) => {
             .then( coping_skill => {
                 dispatch(addCopingSkill(coping_skill))
             })
+    }
+}
+
+const removeCopingSkill = (id) => {
+    return {
+        type: "DELETE_COPING_SKILL",
+        id
+    }
+}
+
+export const deleteCopingSkill = (id) => {
+    return (dispatch) => {
+        fetch(`http://localhost:3001/coping_skills/${id}`, {
+            method: "DELETE"
+        })
+            .then( resp => dispatch(removeCopingSkill(id)))
     }
 }
