@@ -17,7 +17,6 @@ class App extends Component {
     this.props.fetchTriggers()
     this.props.fetchWarningSigns()
     this.props.fetchCopingSkills()
-    // add each action individually
   }
   
   render() {
