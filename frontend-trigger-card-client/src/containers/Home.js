@@ -41,10 +41,10 @@ export class Home extends Component {
                         </ul>
                         <br />
                         <h3>"New" Cope Sequence</h3>
-                        <p>Calm: I can calm by?</p>
-                        <p>Options: My options/choices are?</p>
-                        <p>Perform: My best options are?</p>
-                        <p>Evaluate: How did my option work?</p>
+                        <p><u>C</u>alm: I can calm by?</p>
+                        <p><u>O</u>ptions: My options/choices are?</p>
+                        <p><u>P</u>erform: My best options are?</p>
+                        <p><u>E</u>valuate: How did my option work?</p>
                         <br />
                     </div>
                 </div>
