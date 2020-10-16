@@ -11,27 +11,49 @@ export class Home extends Component {
         const coping_skills = this.props.coping_skills.map((coping_skill, i) => <CopingSkillCard key={i} coping_skill={coping_skill}/>)
         return (
             <div className="container-fluid">
-                <div>
-                    Welcome to your trigger card
+                <h1>Trigger Card</h1>
+                <div className="container-fluid card bg-warning">
+                <div className="card-header font-weight-bold"><h2>Triggers</h2></div>
+                    <div className="card-body">
+                        <h5 className="card-title">Things that make me feel mad, sad, or upset</h5>
+                        <ul>
+                            { triggers }
+                        </ul>
+                        <br />
+                    </div>
                 </div>
-                <div>
-                    <h2>Triggers</h2>
-                    <ul>
-                        { triggers }
-                    </ul>
+                <div className="container-fluid bg-danger">
+                <div className="card-header"><h2>Warning Signs</h2></div>
+                    <div className="card-body">
+                        <h5 className="card-title">Others know I am mad, sad, or upset because:</h5>
+                        <ul>
+                            { warning_signs }
+                        </ul>
+                        <br />
+                    </div>
                 </div>
-                <div>
-                    <h2>Warning Signs</h2>
-                    <ul>
-                        { warning_signs }
-                    </ul>
+                <div className="container-fluid bg-success">
+                <div className="card-header"><h2>Coping Skills</h2></div>
+                    <div className="card-body">
+                        <h5 className="card-title">When I am mad, sad, or upset I manage by:</h5>
+                        <ul>
+                            { coping_skills }
+                        </ul>
+                        <br />
+                        <h3>"New" Cope Sequence</h3>
+                        <p>Calm: I can calm by?</p>
+                        <p>Options: My options/choices are?</p>
+                        <p>Perform: My best options are?</p>
+                        <p>Evaluate: How did my option work?</p>
+                        <br />
+                    </div>
                 </div>
-                <div>
-                    <h2>Coping Skills</h2>
-                    <ul>
-                        { coping_skills }
-                    </ul>
-                </div>
+                <br />
+                <footer className="text-right">
+                    <p>Adapted from: Murphy MS, Tim and Maggie Bennington-Davis Md.</p>
+                    <p><u>Restraint and Seclusion: The Model for Eliminating Their Use in Healthcare.</u></p>
+                    <p>Marblehead: HCPro, Inc, 2005. 11-14.</p>
+                </footer>
             </div>
         )
     }

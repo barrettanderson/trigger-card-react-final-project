@@ -14,6 +14,7 @@ class TriggerList extends Component {
                         <ul>
                             { triggers }
                         </ul>
+                        <br />
                         <h3>Add Trigger</h3>
                         <TriggerForm />
                     </div>

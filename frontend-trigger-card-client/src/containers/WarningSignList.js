@@ -15,6 +15,7 @@ class WarningSignList extends Component {
                         <ul>
                             { warning_signs }
                         </ul>
+                        <br />
                         <h3>Add Warning Sign</h3>
                         <WarningSignForm />
                     </div>
