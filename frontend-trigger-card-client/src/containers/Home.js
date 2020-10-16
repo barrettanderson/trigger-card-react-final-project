@@ -6,12 +6,12 @@ import { connect } from 'react-redux'
 
 export class Home extends Component {
     render() {
-        const triggers = this.props.triggers.map((trigger, i) => <TriggerCard key={i} trigger={trigger} />)
+        const triggers = this.props.triggers.map((trigger, i) => <TriggerCard key={i} trigger={trigger}/>)
         const warning_signs = this.props.warning_signs.map((warning_sign, i) => <WarningSignCard key={i} warning_sign={warning_sign} />)
         const coping_skills = this.props.coping_skills.map((coping_skill, i) => <CopingSkillCard key={i} coping_skill={coping_skill}/>)
         return (
             <div className="container-fluid">
-                <div className="container-fluid">
+                <div>
                     Welcome to your trigger card
                 </div>
                 <div>
