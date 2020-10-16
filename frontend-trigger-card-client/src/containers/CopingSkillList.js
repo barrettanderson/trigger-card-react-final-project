@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
-import CopingSkillCard from '../components/CopingSkillCard';
+import CopingSkillCard from '../components/CopingSkillComponents/CopingSkillCard';
 import { connect } from 'react-redux';
 import CopingSkillForm from './CopingSkillForm'
 
 export class CopingSkillList extends Component {
     render() {
-        // console.log(this.props)
         const coping_skills = this.props.coping_skills.map((coping_skill, i) => <CopingSkillCard key={i} coping_skill={coping_skill}/>)
         return (
-            <div>
+            <div className="container-fluid">
                 <h2>Coping Skills</h2>
                 <ul>
                     { coping_skills }

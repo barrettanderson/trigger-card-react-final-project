@@ -1,14 +1,13 @@
 import React, { Component } from 'react'
-import TriggerCard from '../components/TriggerCard'
+import TriggerCard from '../components/TriggerComponents/TriggerCard'
 import { connect } from 'react-redux'
 import TriggerForm from './TriggerForm'
 
 class TriggerList extends Component {
     render() {
-        // console.log(this.props)
         const triggers = this.props.triggers.map((trigger, i) => <TriggerCard key={i} trigger={trigger} />)
         return (
-            <div>
+            <div className="container-fluid">
                 <h2>Triggers</h2>
                 <ul>
                     { triggers }
