@@ -8,13 +8,16 @@ class WarningSignList extends Component {
     render() {
         const warning_signs = this.props.warning_signs.map((warning_sign, i) => <WarningSignCard key={i} warning_sign={warning_sign} />)
         return (
-            <div className="container-fluid">
-                <h2>Warning Signs</h2>
-                <ul>
-                    { warning_signs }
-                </ul>
-                <h3>Add Warning Sign</h3>
-                <WarningSignForm />
+            <div className="container-fluid bg-danger">
+                <div className="card-header"><h2>Warning Signs</h2></div>
+                    <div className="card-body">
+                        <h5 className="card-title">Others know I am mad, sad, or upset because:</h5>
+                        <ul>
+                            { warning_signs }
+                        </ul>
+                        <h3>Add Warning Sign</h3>
+                        <WarningSignForm />
+                    </div>
             </div>
         )
     }
